@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أكاديمية النجاح </title>
+
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+user-select:none;
+-webkit-user-select:none;
+}
+:root{
+--primary:#6366f1;
+--secondary:#a855f7;
+--bg:#f8fafc;
+--text:#1e293b;
+}
+
+body{
+font-family:'Tajawal',sans-serif;
+background:var(--bg);
+margin:0;
+padding:20px;
+display:flex;
+justify-content:center;
+}
+
+.wrapper{
+width:100%;
+max-width:650px;
+}
+
+header{
+text-align:center;
+margin-bottom:30px;
+}
+
+header h1{
+color:var(--text);
+margin-bottom:5px;
+}
+
+.badge{
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+color:white;
+padding:6px 16px;
+border-radius:20px;
+font-size:13px;
+}
+
+.chapter-card{
+background:white;
+border-radius:16px;
+margin-bottom:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
+border:1px solid #e2e8f0;
+transition:.3s;
+}
+
+.chapter-card:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.chapter-header{
+padding:20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.chapter-title{
+display:flex;
+align-items:center;
+gap:15px;
+font-weight:bold;
+color:var(--text);
+}
+
+.chapter-number{
+width:36px;
+height:36px;
+background:#f1f5f9;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+color:var(--primary);
+}
+
+a{
+text-decoration:none;
+}
+@media (max-width: 600px) {
+    img {
+        width: 150px;
+        height: 150px;
+    }
+    p {
+        font-size: 1em;
+    }
+    a {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5em;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<header>
+<h1>كيمياء السادس العلمي</h1>
+<span class="badge">الأستاذ حسين الهاشمي</span>
+</header>
+
+
+<a href="c1.html">
+<div class="chapter-card">
+<div class="chapter-header">
+<div class="chapter-title">
+<div class="chapter-number">01</div>
+الفصل الأول
+</div>
+</div>
+</div>
+</a>
+
+
+<a href="c2.html">
+<div class="chapter-card">
+<div class="chapter-header">
+<div class="chapter-title">
+<div class="chapter-number">02</div>
+الفصل الثاني
+</div>
+</div>
+</div>
+</a>
+
+
+<a href="c3.html">
+<div class="chapter-card">
+<div class="chapter-header">
+<div class="chapter-title">
+<div class="chapter-number">03</div>
+الفصل الثالث
+</div>
+</div>
+</div>
+</a>
+
+
+<a href="c4.html">
+<div class="chapter-card">
+<div class="chapter-header">
+<div class="chapter-title">
+<div class="chapter-number">04</div>
+الفصل الرابع
+</div>
+</div>
+</div>
+</a>
+
+
+<a href="c5.html">
+<div class="chapter-card">
+<div class="chapter-header">
+<div class="chapter-title">
+<div class="chapter-number">05</div>
+الفصل الخامس
+</div>
+</div>
+</div>
+</a>
+
+
+<a href="c6.html">
+<div class="chapter-card">
+<div class="chapter-header">
+<div class="chapter-title">
+<div class="chapter-number">06</div>
+الفصل السادس
+</div>
+</div>
+</div>
+</a>
+
+
+<a href="c7.html">
+<div class="chapter-card">
+<div class="chapter-header">
+<div class="chapter-title">
+<div class="chapter-number">07</div>
+الفصل السابع
+</div>
+</div>
+</div>
+</a>
+
+
+<a href="c8.html">
+<div class="chapter-card">
+<div class="chapter-header">
+<div class="chapter-title">
+<div class="chapter-number">08</div>
+الفصل الثامن
+</div>
+</div>
+</div>
+</a>
+
+
+</div>
+<script>
+    /* منع كليك يمين */
+document.addEventListener("contextmenu", function(e){
+e.preventDefault();
+});
+
+/* منع اختصارات الفحص */
+
+document.onkeydown = function(e){
+
+if(e.keyCode == 123){
+return false;
+}
+
+if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+return false;
+}
+
+if(e.ctrlKey && e.shiftKey && e.keyCode == 74){
+return false;
+}
+
+if(e.ctrlKey && e.keyCode == 85){
+return false;
+}
+
+if(e.ctrlKey && e.keyCode == 67){
+return false;
+}
+
+if(e.ctrlKey && e.keyCode == 83){
+return false;
+}
+
+};
+
+/* كشف فتح DevTools */
+
+setInterval(function(){
+
+const width = window.outerWidth - window.innerWidth;
+const height = window.outerHeight - window.innerHeight;
+
+if(width > 160 || height > 160){
+document.body.innerHTML = "تم إيقاف الصفحة بسبب محاولة الفحص";
+}
+
+},1000);
+</script>
+
+
+</body>
+</html>
