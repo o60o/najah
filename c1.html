@@ -3,230 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>محاضرات الفصل</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-
 <style>
-
-body{
-user-select:none;
--webkit-user-select:none;
-}
-
-:root{
---primary:#6366f1;
---secondary:#a855f7;
---success:#10b981;
---bg:#f8fafc;
---text:#1e293b;
-}
-
-body{
-font-family:'Tajawal',sans-serif;
-background:var(--bg);
-margin:0;
-padding:20px;
-}
-
-.wrapper{
-max-width:900px;
-margin:auto;
-}
-
-header{
-text-align:center;
-margin-bottom:25px;
-}
-
-.video-box{
-width:100%;
-aspect-ratio:16/9;
-background:black;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-margin-bottom:25px;
-}
-
-iframe{
-width:100%;
-height:100%;
-border:none;
-}
-
-.lesson-item{
-display:flex;
-align-items:center;
-padding:15px;
-background:white;
-border-radius:12px;
-margin-bottom:10px;
-border:1px solid #e2e8f0;
-cursor:pointer;
-transition:0.3s;
-}
-
-.lesson-item:hover{
-background:#f1f5f9;
-}
-
-.lesson-title{
-flex:1;
-font-weight:600;
-}
-
-.check{
-font-size:20px;
-color:var(--success);
-display:none;
-}
-
-.completed .check{
-display:block;
-}
-
-button{
-background:linear-gradient(90deg,var(--primary),var(--secondary));
-border:none;
-color:white;
-padding:10px 18px;
-border-radius:10px;
-cursor:pointer;
-margin-top:10px;
-}
-
+body{user-select:none;-webkit-user-select:none;font-family:'Tajawal',sans-serif;background:#f8fafc;margin:0;padding:20px;}
+.wrapper{max-width:900px;margin:auto;}
+header{text-align:center;margin-bottom:25px;}
+.video-box{width:100%;aspect-ratio:16/9;background:black;border-radius:15px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,0.1);margin-bottom:10px;position:relative;}
+iframe{width:100%;height:100%;border:none;}
+.lesson-item{display:flex;align-items:center;padding:15px;background:white;border-radius:12px;margin-bottom:10px;border:1px solid #e2e8f0;cursor:pointer;transition:0.3s;}
+.lesson-item:hover{background:#f1f5f9;}
+.lesson-title{flex:1;font-weight:600;}
+.check{font-size:20px;color:#10b981;display:none;}
+.completed .check{display:block;}
+button{background:linear-gradient(90deg,#6366f1,#a855f7);border:none;color:white;padding:10px 18px;border-radius:10px;cursor:pointer;margin-top:10px;}
+#fullscreenBtn{position:absolute;top:10px;right:10px;z-index:10;}
 </style>
 </head>
-
 <body>
-
 <div class="wrapper">
-
-<header>
-<h2>الفصل الأول</h2>
-</header>
-
+<header><h2>الفصل الأول</h2></header>
 <div class="video-box" id="player"></div>
-
 <div id="lessons">
 
-<div class="lesson-item" data-id="ASo8RFnSEHw" data-index="0">
-<span class="lesson-title">المحاضرة 1</span>
-<span class="check">✓</span>
-</div>
-
-<div class="lesson-item" data-id="fEiPzmLfPfY" data-index="1">
-<span class="lesson-title">المحاضرة 2</span>
-<span class="check">✓</span>
-</div>
-
-<div class="lesson-item" data-id="cMg7pLlHzmI" data-index="2">
-<span class="lesson-title">المحاضرة 3</span>
-<span class="check">✓</span>
-</div>
-
-<div class="lesson-item" data-id="C0_XrF56ss0" data-index="3">
-<span class="lesson-title">المحاضرة 4</span>
-<span class="check">✓</span>
-</div>
-
-<div class="lesson-item" data-id="c0kG2oY8PEw" data-index="4">
-<span class="lesson-title">المحاضرة 5</span>
-<span class="check">✓</span>
-</div>
-
-<div class="lesson-item" data-id="G1gI0nD_FYk" data-index="5">
-<span class="lesson-title">المحاضرة 6</span>
-<span class="check">✓</span>
-</div>
-
-<div class="lesson-item" data-id="s3KmhuYlG4w" data-index="6">
-<span class="lesson-title">المحاضرة 7</span>
-<span class="check">✓</span>
-</div>
-
-<div class="lesson-item" data-id="7Bv4q-uJ5Cc" data-index="7">
-<span class="lesson-title">المحاضرة 8</span>
-<span class="check">✓</span>
-</div>
-
-<div class="lesson-item" data-id="L0nwdyO45nk" data-index="8">
-<span class="lesson-title">المحاضرة 9</span>
-<span class="check">✓</span>
-</div>
-
-<div class="lesson-item" data-id="BOjPiVq4yYA" data-index="9">
-<span class="lesson-title">المحاضرة 10</span>
-<span class="check">✓</span>
-</div>
+<!-- هنا كل المحاضرات 36 كما عندك -->
+<div class="lesson-item" data-id="ASo8RFnSEHw" data-index="0"><span class="lesson-title">المحاضرة 1</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="fEiPzmLfPfY" data-index="1"><span class="lesson-title">المحاضرة 2</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="cMg7pLlHzmI" data-index="2"><span class="lesson-title">المحاضرة 3</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="C0_XrF56ss0" data-index="3"><span class="lesson-title">المحاضرة 4</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="c0kG2oY8PEw" data-index="4"><span class="lesson-title">المحاضرة 5</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="G1gI0nD_FYk" data-index="5"><span class="lesson-title">المحاضرة 6</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="s3KmhuYlG4w" data-index="6"><span class="lesson-title">المحاضرة 7</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="7Bv4q-uJ5Cc" data-index="7"><span class="lesson-title">المحاضرة 8</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="L0nwdyO45nk" data-index="8"><span class="lesson-title">المحاضرة 9</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="BOjPiVq4yYA" data-index="9"><span class="lesson-title">المحاضرة 10</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="PNtrcWau5CU" data-index="10"><span class="lesson-title">المحاضرة 11</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="fUwjE-yYc1E" data-index="11"><span class="lesson-title">المحاضرة 12</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="kDNKzBwgMQE" data-index="12"><span class="lesson-title">المحاضرة 13</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="eeQM1RIG3_k" data-index="13"><span class="lesson-title">المحاضرة 14</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="MIS3ZEk0_kc" data-index="14"><span class="lesson-title">المحاضرة 15</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="VFd-e4hi1YY" data-index="15"><span class="lesson-title">المحاضرة 16</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="11hFdAcRrIQ" data-index="16"><span class="lesson-title">المحاضرة 17</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="6mePBz2GadI" data-index="17"><span class="lesson-title">المحاضرة 18</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="7NoIWW2EM6g" data-index="18"><span class="lesson-title">المحاضرة 19</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="L2vf25aPU4A" data-index="19"><span class="lesson-title">المحاضرة 20</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="_9EGR9RcR1E" data-index="20"><span class="lesson-title">المحاضرة 21</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="0RfFOokhfuY" data-index="21"><span class="lesson-title">المحاضرة 22</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="9Z49rJWPWXo" data-index="22"><span class="lesson-title">المحاضرة 23</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="8A5xfMuD4sc" data-index="23"><span class="lesson-title">المحاضرة 24</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="v7FTyasTKoI" data-index="24"><span class="lesson-title">المحاضرة 25</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="yvtfnFBe6NY" data-index="25"><span class="lesson-title">المحاضرة 26</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="iQrg1gj1v3s" data-index="26"><span class="lesson-title">المحاضرة 27</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="6A5_l8LKUa4" data-index="27"><span class="lesson-title">المحاضرة 28</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="6zdu0C35_fo" data-index="28"><span class="lesson-title">المحاضرة 29</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="iRV1EMDOE9A" data-index="29"><span class="lesson-title">المحاضرة 30</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="zID-_DzZeag" data-index="30"><span class="lesson-title">المحاضرة 31</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="WpX22BXo76I" data-index="31"><span class="lesson-title">المحاضرة 32</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="lblnqaBI-BA" data-index="32"><span class="lesson-title">المحاضرة 33</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="0ALb4fETt2Q" data-index="33"><span class="lesson-title">المحاضرة 34</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="rvKlKKXqof4" data-index="34"><span class="lesson-title">المحاضرة 35</span><span class="check">✓</span></div>
+<div class="lesson-item" data-id="nkZV-Ljcij4" data-index="35"><span class="lesson-title">المحاضرة 36</span><span class="check">✓</span></div>
 
 </div>
 
 <button onclick="finishLesson()">إنهاء المحاضرة</button>
-
 </div>
 
 <script>
-
 const player = document.getElementById("player")
 const lessons = document.querySelectorAll(".lesson-item")
-
 let current = 0
 
 function playVideo(id,index){
-
-current=index
-
-player.innerHTML =
-`<iframe 
-src="https://www.youtube.com/embed/${id}?rel=0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen>
-</iframe>`
-
+    current=index
+    player.innerHTML = `<iframe 
+        src="https://www.youtube.com/embed/${id}?rel=0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>`
 }
 
 lessons.forEach(item=>{
-
-item.addEventListener("click",function(){
-
-const id=this.dataset.id
-const index=this.dataset.index
-
-playVideo(id,index)
-
-})
-
+    item.addEventListener("click",function(){
+        const id=this.dataset.id
+        const index=this.dataset.index
+        playVideo(id,index)
+    })
 })
 
 function finishLesson(){
-
-const item=lessons[current]
-
-item.classList.add("completed")
-
-localStorage.setItem("lesson"+current,true)
-
+    const item=lessons[current]
+    item.classList.add("completed")
+    localStorage.setItem("lesson"+current,true)
 }
 
 lessons.forEach((item,i)=>{
-
-if(localStorage.getItem("lesson"+i)){
-
-item.classList.add("completed")
-
-}
-
+    if(localStorage.getItem("lesson"+i)){
+        item.classList.add("completed")
+    }
 })
 
 lessons[0].click()
-
-document.addEventListener("contextmenu", function(e){
-e.preventDefault();
-});
-
 </script>
 
 </body>
